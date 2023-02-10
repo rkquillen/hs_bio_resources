@@ -1,0 +1,33 @@
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a seat layout</title>
+    <script type="text/javascript" src='javaseat.js'></script>
+  </head>
+<body>
+  <div class="container">
+    <div class="mt-5">  </div>
+      <table id="tablePlaceholder" class="table table-bordered">
+
+      </table>
+
+
+  <!-- paste student names -->
+    <form id="pasteform" class="col-8 offset-2">
+    <textarea id="paste" class="form-control" rows="10"></textarea>
+    <button onclick="getRoster()"  id="pastebutton" type="button" class="btn btn-primary">Add students to roster</button>
+    </form>
+
+    <form id='rowcolform' class="col-8 offset-2">
+      <div><input id="roomcols" class="form-control" type="number" name="roomcols" placeholder="how many vertical columns?"></div>
+      <div><input id="roomrows" class="form-control" type="number" name="roomrows" placeholder="how many horizontal rows?"></div>
+      <button onclick="createLayout()" type="button" class="btn btn-primary">Submit</button>
+    </form>
+  <!-- seat rows will be inserted here  -->
+    <div id="placeholder"></div>
+      <button id="shuffleButton" style="display:none" onclick="shuffleChart()" class='btn btn-primary' type="button">shuffle seating chart</button>
+      <ul class='list-unstyled col-12 row mt-5'id="ulRoster"></ul>
+  </div>
+</body>
+</html>

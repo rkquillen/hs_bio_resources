@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="models.js"></script>
+    <script type="text/javascript" src="pheno.js"></script>
+    <script type="text/javascript" src="punnett.js"></script>
+    <meta charset="utf-8">
+    <title>Punnett squares</title>
+
+  </head>
+<body>
+  <div class="container">
+    <br>
+    <div class="row justify-content-center">
+      <input type="radio" name="model" id="newt" value="newt" onclick="setModels()" class="model"><label for="newt">newt</label>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="model" id="dros" value="dros" onclick="setModels()" class="model"><label for="dros">drosophila</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="row justify-content-center" id="radioPheno">
+    </div>
+
+    <p class="row justify-content-center"></p>
+  <div id="inputAlleles" style="display:none">
+    <div id="" class="row justify-content-center">
+      <input type="text" placeholder=" parent alleles" maxlength="2" onkeyup="makeGametes(id, value), showPheno()" id="mom" class="">
+      <p style="text-align:center"class=''>&nbsp;X&nbsp;</p>
+      <input type="text" placeholder=" parent alleles" maxlength="2" onkeyup="makeGametes(id, value), showPheno()" id="dad" class="">
+    </div>
+  </div>
+  <br>
+  <div id="punnettSquare" >
+  </div>
+
+  <br><br><br>
+  <table class="table-borderless" style="text-align:center; margin:auto; width:50%; height:10rem">
+    <tr>
+      <th id="legendModel1" class="legend legendModel"></th>
+      <th id="legendText1" style="text-align:left" class="legend legendText"></th>
+    </tr>
+    <tr>
+      <th id="legendModel2" class="legend legendModel"></th>
+      <th id="legendText2" style=" text-align:left" class="legend legendText"></th>
+    </tr>
+    <tr>
+      <th id="legendModel3" class="legend legendModel"></th>
+      <th id="legendText3"style=" text-align:left" class="legend legendText"></th>
+    </tr>
+    <tr>
+      <th id="legendModel4" class="legend legendModel"></th>
+      <th id="legendText4"style=" text-align:left" class="legend legendText"></th>
+    </tr>
+  </table>
+  </div>
+</body>
+</html>
